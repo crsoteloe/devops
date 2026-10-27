@@ -108,9 +108,9 @@ jobs:
 
       - name: Probar empaquetado y arranque con Docker Compose
         run: |
-          docker-compose up -d --build
-          docker-compose ps
+          docker compose up -d --build
+          docker compose ps
 
       - name: Detener contenedores simulados
         if: always()
-        run: docker-compose down
+        run: docker compose down
